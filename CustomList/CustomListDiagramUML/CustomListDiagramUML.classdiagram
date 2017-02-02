@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" dslVersion="1.0.0.0" Id="a753c131-4b2c-43f1-a36b-4a9d71d6b087" name="CustomListDiagramUML" linkedPackageId="6ac46309-8348-4ef0-9264-f9afe02632a6" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+  <profileInstances>
+    <packageHasProfileInstances Id="bd7fab8e-ee7a-45c8-accc-fe03e4b94c76">
+      <profileInstance Id="76260db1-c5cc-4fc1-89d5-110243d6ff38" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="ddcd781a-5ffb-4019-b336-3c8392d15093">
+      <profileInstance Id="c891fe99-b041-4e6c-a74d-4ca36a0feac8" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="a36681fc-6911-42a2-9486-b673041493db" name="CustomList" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="1c4cb168-78e3-4665-9965-5c53c900e185" />
+        <ownedAttributesInternal>
+          <property Id="6ced79ac-8abe-4041-9ffd-30c7eb99ebba" name="public int count;" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="4e1650e2-d1c2-4e3b-a700-55fbf0201a17" />
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation Id="9c9647a6-c120-4c3a-a844-d1b8c1cd870e" name="public int Add" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="32cd5e55-a7d9-48a0-9815-7e9bf01cdcd1" />
+          </operation>
+          <operation Id="6e8c79c7-0aec-4dad-ae39-230eeba8eef8" name="public int Remove" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="6ca2cc01-9852-4e47-b27d-27ddfcd3ae17" />
+          </operation>
+          <operation Id="673a8aa2-b6b3-4e51-bf14-9e66ed3e219e" name="public int Index" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="00fbcd5f-2315-46ab-a466-d0cf43009d78" />
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <enumeration Id="36b6110b-8716-4959-9f57-623045304b9f" name="IEnumerable" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="7aca89bd-eccc-4fa4-9a60-2176d238b82f" />
+      </enumeration>
+    </logicalClassDesignerModelHasTypes>
+  </packagedElements>
+  <package Id="6ac46309-8348-4ef0-9264-f9afe02632a6" name="CustomListDiagramUML">
+    <elementDefinition Id="4268340f-e4bb-412e-8e11-b36cb60350ca" />
+  </package>
+</logicalClassDesignerModel>
