@@ -8,6 +8,8 @@ namespace CustomList
 {
     public class CustomListClass
     {
+        T [] customArray;
+
         public int Count = 10;
 
         public int Add(int item)

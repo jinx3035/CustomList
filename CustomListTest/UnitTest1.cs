@@ -9,9 +9,9 @@ namespace CustomListTest
     {
         [TestMethod]
         public void AddToList()
-            {
+        {
             //Arrange
-            CustomListClass list = new CustomListClass();
+            CustomListClass<int> list = new CustomListClass<int>();
             int item = 1;
             int result;
             //Act
@@ -24,7 +24,7 @@ namespace CustomListTest
         public void RemoveFromList()
         {
             //Arrange
-            CustomListClass list = new CustomListClass();
+            CustomListClass<int> list = new CustomListClass<int>();
             int item = 1;
             int result;
             //Act
@@ -32,5 +32,27 @@ namespace CustomListTest
             //Assert
             Assert.AreEqual(result, list.Count);
         }
+
+        [TestMethod]
+        public void List()
+        {
+            //Arrange
+
+            //Act
+
+            //Assert
+
+        }
+
+        //[TestMethod]
+        //public void List()
+        //{
+        //    //Arrange
+
+        //    //Act
+
+        //    //Assert
+
+        //}
     }
 }
