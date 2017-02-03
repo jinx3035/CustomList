@@ -6,21 +6,49 @@ using System.Threading.Tasks;
 
 namespace CustomList
 {
-    public class CustomListClass
+    public class CustomListClass<T>
     {
-        T [] customArray;
+        T[] customArray = new T[5];
+        public int Count = 0;
 
-        public int Count = 10;
 
-        public int Add(int item)
+        public void Add(T item)
         {
-            return Count;
+            
+            if (Count >= customArray.Length)
+            {
+                T[] tempArray = new T[customArray.Length + 5];
+                for (int i = 0; i < customArray.Length; i++)
+                {
+                    customArray[i] = tempArray[i];
+                }
+                    tempArray[Count] = item;
+                    customArray = tempArray;
+                    Count++;
+            }
+            else
+            {
+                customArray[Count] = item;
+                Count++;
+            } 
+
+
         }
 
-        public int Remove(int item)
+        public void Remove(T item)
         {
-            return Count;
+            for (int i = 0; i > 0; i--) ;
+            if (Count > 1)
+            {
+                Count--;
+            }
         }
+
+        public void IndexOf()
+        {
+
+        }
+
 
     }
 }

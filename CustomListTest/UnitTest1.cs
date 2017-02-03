@@ -12,12 +12,11 @@ namespace CustomListTest
         {
             //Arrange
             CustomListClass<int> list = new CustomListClass<int>();
-            int item = 1;
-            int result;
+            int expectedLength = 1;
             //Act
-            result = list.Add(item);
+            list.Add(6);
             //Assert
-            Assert.AreEqual(result, list.Count);
+            Assert.AreEqual(expectedLength, list.Count);
         }
 
         [TestMethod]
@@ -25,24 +24,15 @@ namespace CustomListTest
         {
             //Arrange
             CustomListClass<int> list = new CustomListClass<int>();
-            int item = 1;
-            int result;
+            int expectedLength = 1;
+;
             //Act
-            result = list.Remove(item);
-            //Assert
-            Assert.AreEqual(result, list.Count);
-        }
-
-        [TestMethod]
-        public void List()
-        {
-            //Arrange
-
-            //Act
+            list.Remove(3);
 
             //Assert
-
+            Assert.AreEqual(expectedLength, list.Count);
         }
+
 
         //[TestMethod]
         //public void List()
