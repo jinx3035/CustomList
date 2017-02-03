@@ -8,9 +8,15 @@ namespace CustomList
 {
     public class CustomListClass<T>
     {
-        T[] customArray = new T[5];
-        public int Count = 0;
 
+        T[] customArray = new T[5];
+        public int Count;
+
+        
+        //public CustomListClass()
+        //{
+        //    Count = 0;
+        //}
 
         public void Add(T item)
         {
@@ -34,20 +40,23 @@ namespace CustomList
 
         }
 
-        public void IndexOf()
+        public bool Remove(T item)
         {
 
+            if (Count > 0)
+            {
+                for (int i = this.Count; i > 0; i--)
+                {
+                    customArray[i] = item;                    
+                }
+                    Count--;
+                return true;
+            }
+            else
+            {
+                return false;
+            }    
+            
         }
-
-        //public void Remove(T item)
-        //{
-        //    for (int i = 0; i > 0; i--) ;
-        //    if (Count > 1)
-        //    {
-        //        Count--;
-        //    }
-        //}
-
-
     }
 }
