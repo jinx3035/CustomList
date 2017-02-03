@@ -20,19 +20,33 @@ namespace CustomListTest
         }
 
         [TestMethod]
-        public void RemoveFromList()
+        public void EstablishIndex()
         {
             //Arrange
             CustomListClass<int> list = new CustomListClass<int>();
-            int expectedLength = 1;
-;
+            int determineIndex;
+            int actualIndex;
+
             //Act
-            list.Remove(3);
+            list.IndexOf();
 
             //Assert
-            Assert.AreEqual(expectedLength, list.Count);
+
         }
 
+        //        [TestMethod]
+        //        public void RemoveFromList()
+        //        {
+        //            //Arrange
+        //            CustomListClass<int> list = new CustomListClass<int>();
+        //            int expectedLength = 1;
+        //;
+        //            //Act
+        //            list.Remove(3);
+
+        //            //Assert
+        //            Assert.AreEqual(expectedLength, list.Count);
+        //        }
 
         //[TestMethod]
         //public void List()

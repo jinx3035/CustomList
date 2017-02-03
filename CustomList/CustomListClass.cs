@@ -32,22 +32,21 @@ namespace CustomList
                 Count++;
             } 
 
-
-        }
-
-        public void Remove(T item)
-        {
-            for (int i = 0; i > 0; i--) ;
-            if (Count > 1)
-            {
-                Count--;
-            }
         }
 
         public void IndexOf()
         {
 
         }
+
+        //public void Remove(T item)
+        //{
+        //    for (int i = 0; i > 0; i--) ;
+        //    if (Count > 1)
+        //    {
+        //        Count--;
+        //    }
+        //}
 
 
     }
