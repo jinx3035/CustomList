@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,17 +7,12 @@ using System.Threading.Tasks;
 
 namespace CustomList
 {
-    public class CustomListClass<T>
+    public class CustomListClass<T> :IEnumerable
     {
 
         T[] customArray = new T[5];
         public int Count;
 
-        
-        //public CustomListClass()
-        //{
-        //    Count = 0;
-        //}
 
         public void Add(T item)
         {
@@ -36,27 +32,27 @@ namespace CustomList
             {
                 customArray[Count] = item;
                 Count++;
-            } 
-
+            }
         }
 
-        public bool Remove(T item)
-        {
+        public void Remove(T item)
+        {            
+            T[] tempArray = new T[customArray.Length];
 
-            if (Count > 0)
+            for (int i = 0; i > customArray.Length; i++)
             {
-                for (int i = this.Count; i > 0; i--)
+                if(!(item.Equals(customArray[i])))
                 {
-                    customArray[i] = item;                    
+                    customArray[i] = tempArray[i];
                 }
-                    Count--;
-                return true;
+                tempArray[i] = customArray[i];
             }
-            else
-            {
-                return false;
-            }    
-            
+            Count--;            
+        }
+
+        public IEnumerator GetEnumerator()
+        {
+            throw new NotImplementedException();
         }
     }
 }

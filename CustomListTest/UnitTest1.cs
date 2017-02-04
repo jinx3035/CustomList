@@ -24,7 +24,7 @@ namespace CustomListTest
         public void RemoveFromList()
         {
             //Arrange
-            CustomListClass<int> list = new CustomListClass<int>();
+            CustomListClass<int> list = new CustomListClass<int>() {4,3};
             int expectedLength = 1;
             
             //Act
@@ -32,6 +32,21 @@ namespace CustomListTest
 
             //Assert
             Assert.AreEqual(expectedLength, list.Count);
+        }
+
+        [TestMethod]
+        public void IterateList()
+        {
+            //Arrange
+            CustomListClass<string> list = new CustomListClass<string>() {"Friday", "Saturday", "Sunday"};
+            int target = 3;
+            string result;
+            //Act
+            result = IEnumerator list.GetEnumerator();
+
+            //Assert
+            Assert.AreEqual(target, result);
+
         }
 
         //[TestMethod]
