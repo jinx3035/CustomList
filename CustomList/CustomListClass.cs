@@ -13,7 +13,7 @@ namespace CustomList
         T[] customArray = new T[5];
         public int Count;
         public string[] days;
-
+        private int[] arr = {1};
 
         public void Add(T item)
         {
@@ -60,11 +60,14 @@ namespace CustomList
             }
         }
 
-                                                                    //public void Reset() { currentIndex = -1; }
-
-        //object IEnumerator<T>.Current
-        //{
-        //    get { return Current; }
-        //}
+        public override string ToString()
+        {
+                string result = new string(Array.ConvertAll<int, char>(arr, x => Convert.ToChar(x + 0x30)));
+                return result;
+        }
     }
 }
+
+//T[] tempArray = new T[customArray.Length];
+//for (int i = 0; i < customArray.Length; i++)
+//{
