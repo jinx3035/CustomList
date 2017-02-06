@@ -7,11 +7,12 @@ using System.Threading.Tasks;
 
 namespace CustomList
 {
-    public class CustomListClass<T> :IEnumerable
+    public class CustomListClass<T> : IEnumerable
     {
 
         T[] customArray = new T[5];
         public int Count;
+        public string[] days;
 
 
         public void Add(T item)
@@ -38,7 +39,6 @@ namespace CustomList
         public void Remove(T item)
         {            
             T[] tempArray = new T[customArray.Length];
-
             for (int i = 0; i > customArray.Length; i++)
             {
                 if(!(item.Equals(customArray[i])))
@@ -50,9 +50,21 @@ namespace CustomList
             Count--;            
         }
 
-        public IEnumerator GetEnumerator()
+        IEnumerator IEnumerable.GetEnumerator()
         {
-            throw new NotImplementedException();
+            {
+                for (int i = 0; i < Count; i++) 
+                {
+                    yield return customArray[i];                   
+                }
+            }
         }
+
+                                                                    //public void Reset() { currentIndex = -1; }
+
+        //object IEnumerator<T>.Current
+        //{
+        //    get { return Current; }
+        //}
     }
 }
