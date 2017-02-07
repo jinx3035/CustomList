@@ -12,8 +12,7 @@ namespace CustomList
 
         T[] customArray = new T[5];
         public int Count;
-        public string[] days;
-        private int[] arr = {1};
+        public object items = new string[5];
 
         public void Add(T item)
         {
@@ -62,12 +61,17 @@ namespace CustomList
 
         public override string ToString()
         {
-                string result = new string(Array.ConvertAll<int, char>(arr, x => Convert.ToChar(x + 0x30)));
+            string result = "";
+            for (int i = 0; i < Count; i++)
+            {
+                result = string.Concat(customArray[i].ToString());
+            }
                 return result;
         }
     }
 }
 
-//T[] tempArray = new T[customArray.Length];
-//for (int i = 0; i < customArray.Length; i++)
-//{
+
+
+
+
