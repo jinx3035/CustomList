@@ -14,6 +14,7 @@ namespace CustomList
         public int Count;
         public object items = new string[5];
         public object obj;
+       
 
         public void Add(T item)
         {
@@ -25,8 +26,8 @@ namespace CustomList
                 {
                     customArray[i] = tempArray[i];
                 }
-                    tempArray[Count] = item;
                     customArray = tempArray;
+                    tempArray[Count] = item;                   
                     Count++;
             }
             else
@@ -69,6 +70,8 @@ namespace CustomList
             }
             return result;
         }
+
+        // Overload +
         public static CustomListClass<T> operator +(CustomListClass<T> one, CustomListClass<T> two)
         {
             CustomListClass <T> three = new CustomListClass<T>();
