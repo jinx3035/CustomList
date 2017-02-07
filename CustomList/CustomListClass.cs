@@ -12,22 +12,20 @@ namespace CustomList
 
         T[] customArray = new T[5];
         public int Count;
-        public object items = new string[5];
         public object obj;
        
 
         public void Add(T item)
-        {
-            
+        {            
             if (Count >= customArray.Length)
             {
-                T[] tempArray = new T[customArray.Length + 5];
+                T[] temporaryArray = new T[customArray.Length + 5];
                 for (int i = 0; i < customArray.Length; i++)
                 {
-                    customArray[i] = tempArray[i];
+                    customArray[i] = temporaryArray[i];
                 }
-                    customArray = tempArray;
-                    tempArray[Count] = item;                   
+                    customArray = temporaryArray;
+                    customArray[Count] = item;                   
                     Count++;
             }
             else
@@ -39,14 +37,14 @@ namespace CustomList
 
         public void Remove(T item)
         {            
-            T[] tempArray = new T[customArray.Length];
+            T[] temporaryArray = new T[customArray.Length];
             for (int i = 0; i > customArray.Length; i++)
             {
                 if(!(item.Equals(customArray[i])))
                 {
-                    customArray[i] = tempArray[i];
+                    customArray[i] = temporaryArray[i];
                 }
-                tempArray[i] = customArray[i];
+                temporaryArray[i] = customArray[i];
             }
             Count--;            
         }
@@ -84,6 +82,18 @@ namespace CustomList
                 three.Add(two.customArray[i]);
             }
                 return three;
+        }
+
+        //public static CustomListClass<T> operator -(CustomListClass<T> one, CustomListClass<T> two)
+        //{
+        //    CustomListClass<T> three = new CustomListClass<T>();
+
+        //    return three;
+        //}
+
+        public void Zip()
+        {
+
         }
     }
 }
