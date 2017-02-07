@@ -13,6 +13,7 @@ namespace CustomList
         T[] customArray = new T[5];
         public int Count;
         public object items = new string[5];
+        public object obj;
 
         public void Add(T item)
         {
@@ -66,7 +67,20 @@ namespace CustomList
             {
                 result = string.Concat(customArray[i].ToString());
             }
-                return result;
+            return result;
+        }
+        public static CustomListClass<T> operator +(CustomListClass<T> one, CustomListClass<T> two)
+        {
+            CustomListClass <T> three = new CustomListClass<T>();
+            for (int i = 0; i < one.Count; i++)
+            {
+                three.Add(one.customArray[i]);
+            }
+            for (int i = 0; i < two.Count; i++)
+            {
+                three.Add(two.customArray[i]);
+            }
+                return three;
         }
     }
 }
